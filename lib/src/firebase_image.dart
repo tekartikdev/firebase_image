@@ -123,9 +123,9 @@ class FirebaseImage extends ImageProvider<FirebaseImage> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     if (other.runtimeType != runtimeType) return false;
-    final FirebaseImage typedOther = other;
+    final FirebaseImage typedOther = other as FirebaseImage;
     return _imageObject.uri == typedOther._imageObject.uri &&
         scale == typedOther.scale;
   }
