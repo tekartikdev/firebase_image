@@ -4,7 +4,7 @@ version: 1.2.0
 homepage: https://github.com/mattreid1/firebase_image
 
 environment:
-  sdk: '>=3.0.0-0 <5.0.0'
+  sdk: ^3.6.0
 
 dependencies:
   flutter:
