@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Firebase Image Provider Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(title: 'Firebase Image Provider example'),
     );
   }
@@ -42,16 +40,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: AppBar(title: Text(widget.title)),
       body: Image(
-        image: FirebaseImage('gs://bucket123/userIcon123.jpg',
-            shouldCache: true, // The image should be cached (default: True)
-            maxSizeBytes: 3000 * 1000, // 3MB max file size (default: 2.5MB)
-            cacheRefreshStrategy:
-                CacheRefreshStrategy.NEVER // Switch off update checking
-            ),
+        image: FirebaseImage(
+          'gs://bucket123/userIcon123.jpg',
+          shouldCache: true, // The image should be cached (default: True)
+          maxSizeBytes: 3000 * 1000, // 3MB max file size (default: 2.5MB)
+          cacheRefreshStrategy:
+              CacheRefreshStrategy.NEVER, // Switch off update checking
+        ),
         width: 100,
       ),
     );

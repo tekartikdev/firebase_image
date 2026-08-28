@@ -27,8 +27,10 @@ class FirebaseImageObject {
     };
   }
 
-  factory FirebaseImageObject.fromMap(Map<String, dynamic> map,
-      [FirebaseApp? firebaseApp]) {
+  factory FirebaseImageObject.fromMap(
+    Map<String, dynamic> map, [
+    FirebaseApp? firebaseApp,
+  ]) {
     final String bucket = map['bucket'];
     final String remotePath = map['remotePath'];
     return FirebaseImageObject(
@@ -41,9 +43,14 @@ class FirebaseImageObject {
   }
 
   static Reference _getImageRef(
-      String bucket, String remotePath, FirebaseApp? firebaseApp) {
-    FirebaseStorage storage =
-        FirebaseStorage.instanceFor(app: firebaseApp, bucket: bucket);
+    String bucket,
+    String remotePath,
+    FirebaseApp? firebaseApp,
+  ) {
+    FirebaseStorage storage = FirebaseStorage.instanceFor(
+      app: firebaseApp,
+      bucket: bucket,
+    );
     return storage.ref().child(remotePath);
   }
 }
