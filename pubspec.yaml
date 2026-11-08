@@ -18,5 +18,6 @@ dependencies:
 
 dev_dependencies:
   flutter_lints:
+  material_ui: ">=1.5.0"
   flutter_test:
     sdk: flutter

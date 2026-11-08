@@ -6,7 +6,7 @@ import 'package:firebase_image/src/cache_manager.dart';
 import 'package:firebase_image/src/image_object.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class FirebaseImage extends ImageProvider<FirebaseImage> {
   // Default: True. Specified whether or not an image should be cached (optional)
