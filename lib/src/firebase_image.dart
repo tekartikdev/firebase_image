@@ -43,10 +43,10 @@ class FirebaseImage extends ImageProvider<FirebaseImage> {
     this.cacheRefreshStrategy = CacheRefreshStrategy.BY_METADATA_DATE,
     this.firebaseApp,
   }) : _imageObject = FirebaseImageObject(
-         bucket: _getBucket(location),
-         remotePath: _getImagePath(location),
-         reference: _getImageRef(location, firebaseApp),
-       );
+          bucket: _getBucket(location),
+          remotePath: _getImagePath(location),
+          reference: _getImageRef(location, firebaseApp),
+        );
 
   /// Returns the image as bytes
   Future<Uint8List> getBytes() {
